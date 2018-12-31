@@ -1,0 +1,58 @@
+:root {
+    --font-color: #111111;
+}
+
+span.akemashite,span.omedetou,span.gozaimasu,span.hon-nenmo,span.yoroshiku{
+    animation: blurFadeIn 5s ease-out;
+    animation-fill-mode:forwards;
+}
+span.akemashite{
+    animation-delay: 1s;
+}
+span.omedetou{
+    animation-delay: 2s;
+}
+span.gozaimasu{
+    animation-delay: 3s;
+}
+span.hon-nenmo{
+    animation-delay: 4s;
+}
+span.yoroshiku{
+    animation-delay: 5s;
+}
+
+.mask{
+    animation: bg-fadeIn 3s ease;
+    animation-delay: 10s;
+    animation-fill-mode:forwards;
+}
+body{
+    animation: fadeIn 5s ease;
+    animation-fill-mode:forwards;
+}
+
+@keyframes blurFadeIn {
+    0%       {text-shadow: 0 0 100px var(--font-color);opacity:0;}
+    30%       {text-shadow: 0 0 70px var(--font-color);opacity: 0.3;}
+    70%       {text-shadow: 0 0 110px var(--font-color);opacity: 0.5;}
+    100%     {text-shadow: 0 0 0px var(--font-color);opacity: 1;}
+}
+
+@keyframes bg-fadeIn{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.99;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.90;
+    }
+}
